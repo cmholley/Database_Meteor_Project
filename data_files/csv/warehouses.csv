@@ -1,0 +1,3 @@
+location_id,manager_id,phone_number,hours, square_footage, subtype
+"4","5487 Hidden Trail Blvd","NULL","Sugarland","TX","77546", 5000, warehouse
+"5","1256 Palace Ct","Apt 24","Katy","TX","77412", 10000, warehouse

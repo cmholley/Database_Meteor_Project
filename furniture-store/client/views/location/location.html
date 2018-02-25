@@ -1,0 +1,137 @@
+<template name="locationList">
+  <p>All Locations</p>
+  {{> addLocation}}
+  {{> locationErrors contextName="updateForm" errorMessage="There was an error updating the record."}}
+  <table class="ui compact celled striped table">
+    <thead>
+      <tr>
+        <th class="two column wide"><i class="ui search icon" id="searchButton"></i>location_id{{> locationSearch columnName='location_id'}}</th>
+        <th class="two column wide">address_line1 {{> locationSearch columnName='address_line1'}}</th>
+        <th class="two column wide">address_line2 {{> locationSearch columnName='address_line2'}}</th>
+        <th class="two column wide">address_city {{> locationSearch columnName='address_city'}}</th>
+        <th class="two column wide">address_state {{> locationSearch columnName='address_state'}}</th>
+        <th class="two column wide">address_zipcode {{> locationSearch columnName='address_zipcode'}}</th>
+        <th class="two column wide">manager_id {{> locationSearch columnName='manager_id'}}</th>
+        <th class="two column wide">phone_number {{> locationSearch columnName='phone_number'}}</th>
+        <th class="two column wide">hours {{> locationSearch columnName='hours'}}</th>
+        <th class="two column wide">square_footage {{> locationSearch columnName='square_footage'}}</th>
+        <th class="two column wide">subtype {{> locationSearch columnName='subtype'}}</th>
+
+        {{#if isLoggedIn}}<th></th>{{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each locations}}
+      {{> location}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="location">
+  {{#if editing}}
+  <tr class="ui form">
+    <td>{{location_id}}</td>
+    <td><div class="ui mini input"><input type="text" id="edit_address_line1" value="{{address_line1}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_address_line2" value="{{address_line2}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_address_city" value="{{address_city}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_address_state" value="{{address_state}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_address_zipcode" value="{{address_zipcode}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_manager_id" value="{{manager_id}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_phone_number" value="{{phone_number}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_hours" value="{{hours}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_square_footage" value="{{square_footage}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_subtype" value="{{subtype}}"></div></td>
+
+    <td><button class="ui mini primary button saveLocation"><i class="ui save icon"></i>Save</button><button class="ui mini red button cancelLocation"><i class="ui cancel icon"></i>Cancel</button></td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>{{location_id}}</td>
+    <td>{{address_line1}}</td>
+    <td>{{address_line2}}</td>
+    <td>{{address_city}}</td>
+    <td>{{address_state}}</td>
+    <td>{{address_zipcode}}</td>
+    <td>{{manager_id}}</td>
+    <td>{{phone_number}}</td>
+    <td>{{hours}}</td>
+    <td>{{square_footage}}</td>
+    <td>{{subtype}}</td>
+    <td>
+      {{#if isLoggedIn}}
+      <button class="ui mini primary button editLocation"><i class="ui edit icon"></i>Edit</button>
+      <button class="ui mini red button deleteLocation"><i class="ui delete icon"></i>Delete</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/if}}
+</template>
+
+<template name="addLocation">
+  {{#if isLoggedIn}}
+  <script src="temp/jquery-1.11.0.min.js"></script> <script src="temp/semantic.min.js"></script> 
+  <script> $(".accordion").accordion(); </script>
+  <div id="addLocationAccordion" class="ui styled fluid accordion">
+    <div class="title">
+      <div class="ui mini green button"><i class="ui add icon"></i>Add Locations</div>  
+    </div>
+
+    <div class="content">{{> locationErrors contextName="insertForm" errorMessage="There was an error inserting the record."}}
+      <form class="ui form" id="addLocationForm">
+        <div class = "ten fields">
+          <div class="field">
+            <label for="address_line1">Address Line1:</label>
+            <input type="text" id="address_line1">
+          </div>
+          <div class="field">
+            <label for="address_line2">Address Line2:</label>
+            <input type="text" id="address_line2"> 
+          </div>
+          <div class="field">
+            <label for="address_city">City:</label>
+            <input type="text" id="address_city">
+          </div>
+          <div class="field">
+            <label for="address_state">State:</label>
+            <input type="text" id="address_state">
+          </div>
+          <div class="field">
+            <label for="address_zipcode">Zipcode:</label>
+            <input type="text" id="address_zipcode">
+          </div>
+          <div class="field">
+            <label for="manager_id">Manager id:</label>
+            <input type="text" id="manager_id">
+          </div>
+          <div class="field">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number">
+          </div>
+          <div class="field">
+            <label for="hours">Hours:</label>
+            <input type="text" id="hours">
+          </div>
+          <div class="field">
+            <label for="square_footage">Square Footage:</label>
+            <input type="text" id="square_footage">
+          </div>
+          <div class="field">
+            <label for="subtype">Subtype:</label>
+            <input type="text" id="subtype">
+          </div>
+        </div>
+        <input type="submit" id="addNewLocation" class="ui mini primary button" value="Add Location">
+        <div id="cancelButton" class="button ui mini red button">Cancel</div>
+      </form>
+    </div>
+  </div>
+  <script> $(".accordion").accordion(); </script>
+  {{/if}}
+</template>
+
+<template name="locationSearch">  
+  <div class="ui fluid mini input filterInput">
+    <input type="text" class="searchInput" placeholder="Filter..." value="{{searchValue}}">
+  </div>  
+</template>

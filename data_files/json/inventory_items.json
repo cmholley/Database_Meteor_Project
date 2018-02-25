@@ -1,0 +1,169 @@
+
+ {
+   "item_id": 1,
+   "location_id": 1,
+   "box_length": 4,
+   "box_width": 3,
+   "box_height": 6,
+   "item_length": 6,
+   "item_width": 4,
+   "item_height": 5,
+   "item_description": "black couch",
+   "brand": "STARK",
+   "model_number": "SF7947",
+   "price": 60
+ }
+ {
+   "item_id": 2,
+   "location_id": 2,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 6,
+   "item_width": 4,
+   "item_height": 4,
+   "item_description": "brown couch",
+   "brand": "TYRELL",
+   "model_number": "GH4855",
+   "price": 60
+ }
+ {
+   "item_id": 3,
+   "location_id": 3,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 6,
+   "item_width": 3,
+   "item_height": 4,
+   "item_description": "4 seat table",
+   "brand": "LANN",
+   "model_number": "IH8573",
+   "price": 70
+ }
+ {
+   "item_id": 4,
+   "location_id": 4,
+   "box_length": 6,
+   "box_width": 5,
+   "box_height": 8,
+   "item_length": 6,
+   "item_width": 4,
+   "item_height": 4,
+   "item_description": "6 seat table",
+   "brand": "LANN",
+   "model_number": "VJ4820",
+   "price": 70
+ }
+ {
+   "item_id": 5,
+   "location_id": 5,
+   "box_length": 4,
+   "box_width": 3,
+   "box_height": 6,
+   "item_length": 7,
+   "item_width": 3,
+   "item_height": 5,
+   "item_description": "queen bed",
+   "brand": "GREY",
+   "model_number": "KH2084",
+   "price": 80
+ }
+ {
+   "item_id": 6,
+   "location_id": 6,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 8,
+   "item_width": 5,
+   "item_height": 6,
+   "item_description": "king bed",
+   "brand": "STARK",
+   "model_number": "PK0948",
+   "price": 80
+ }
+ {
+   "item_id": 7,
+   "location_id": 1,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 9,
+   "item_width": 4,
+   "item_height": 6,
+   "item_description": "black chair",
+   "brand": "STARK",
+   "model_number": "UI4292",
+   "price": 90
+ }
+ {
+   "item_id": 8,
+   "location_id": 2,
+   "box_length": 6,
+   "box_width": 5,
+   "box_height": 8,
+   "item_length": 6,
+   "item_width": 3,
+   "item_height": 5,
+   "item_description": "brown chair",
+   "brand": "BARA",
+   "model_number": "AE2830",
+   "price": 90
+ }
+ {
+   "item_id": 9,
+   "location_id": 3,
+   "box_length": 4,
+   "box_width": 3,
+   "box_height": 6,
+   "item_length": 7,
+   "item_width": 3,
+   "item_height": 4,
+   "item_description": "red desk",
+   "brand": "BARA",
+   "model_number": "BJ4753",
+   "price": 45
+ }
+ {
+   "item_id": 10,
+   "location_id": 4,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 6,
+   "item_width": 4,
+   "item_height": 5,
+   "item_description": "white desk",
+   "brand": "TYRELL",
+   "model_number": "KH9583",
+   "price": 45
+ }
+ {
+   "item_id": 11,
+   "location_id": 5,
+   "box_length": 5,
+   "box_width": 4,
+   "box_height": 7,
+   "item_length": 7,
+   "item_width": 3,
+   "item_height": 4,
+   "item_description": "fold-out chair",
+   "brand": "LANN",
+   "model_number": "GU3842",
+   "price": 50
+ }
+ {
+   "item_id": 12,
+   "location_id": 6,
+   "box_length": 6,
+   "box_width": 5,
+   "box_height": 8,
+   "item_length": 8,
+   "item_width": 3,
+   "item_height": 4,
+   "item_description": "futon",
+   "brand": "LANN",
+   "model_number": "HN8342",
+   "price": 50
+ }

@@ -1,0 +1,17 @@
+mongoimport -h localhost:3001 --db meteor --collection customers --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/customers.json
+mongoimport -h localhost:3001 --db meteor --collection employees --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/employees.json
+mongoimport -h localhost:3001 --db meteor --collection inventory_items --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/inventory_items.json
+mongoimport -h localhost:3001 --db meteor --collection inventory_transfers --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/inventory_transfers.json
+mongoimport -h localhost:3001 --db meteor --collection locations --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/locations.json
+mongoimport -h localhost:3001 --db meteor --collection sales --drop --file E:/Dropbox/School/2017-2018/Fall2017/Databases/NoSQLProject/data_files/json/sales.json
+
+
+mongoimport -h localhost:3001 --db meteor --collection customers --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/customers.json
+mongoimport -h localhost:3001 --db meteor --collection employees --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/employees.json
+mongoimport -h localhost:3001 --db meteor --collection inventory_items --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/inventory_items.json
+mongoimport -h localhost:3001 --db meteor --collection inventory_transfers --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/inventory_transfers.json
+mongoimport -h localhost:3001 --db meteor --collection locations --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/locations.json
+mongoimport -h localhost:3001 --db meteor --collection sales --drop --file C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json/sales.json
+
+C:\Users\cmholley\Dropbox\School\2017-2018\Fall2017\Databases\NoSQLProject\data_files\json
+

@@ -1,0 +1,7 @@
+employee_id,first_name,mid_initial,last_name,location_id,ssn,home_address_line1,home_address_line2,home_address_city,home_address_state,home_address_zipcode,phone_number,email, position, subtype
+3,Lee,D,Holley,1,767898909,8203 Bissonet Ct,Apt 15,Baybrook,TX,77394,232-344-2231,lholley@hotmail.com," ""Checkout""", staff
+6,Jake,S,Root,2,456346987,3917 Mandola Blvd,NULL,Spring,TX,77379,424-432-5322,jroot@gmail.com," ""Checkout""", staff
+9,Steven,E,Abbott,3,656345238,29645 Abbott St,NULL,Katy,TX,77412,523-543-2453,sabbott@att.net," ""Checkout""", staff
+12,Jared,U,Chain,6,464765345,1336 Patrick Ln,NULL,Pearland,TX,77253,826-529-5392,jchain@msn.com," ""Checkout""", staff
+15,Garrett,P,Young,4,646987578,73492 Greenbriar St,Apt 9,Houston,TX,77054,643-634-3534,gyoung@yahoo.com,Warehouse Worker, staff
+16,Jack,N,Nguyen,5,565987890,16253 Lanister Place Blvd,Apt 32,Cypress,TX,77153,532-532-6432,jnguyen@msn.com,Warehouse Worker, staff

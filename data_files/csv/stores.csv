@@ -1,0 +1,5 @@
+location_id, address_line1, address_line2, address_city, address_state, address_zipcode, manager_id,phone_number, hours, subtype
+"1","15846 Barley Ln","Apt 6","Houston","TX","77054", 1,"125-478-8754","8 AM to 8 PM M-Sat, closed Sunday", store
+"2","2458 Amazon Rd","NULL","Spring","TX","77379", 2,"254-659-8795","8 AM to 8 PM M-Sat, closed Sunday", store
+"3","23532 Calumet St","NULL","Humble","TX","77004", 3,"123-123-1235","8 AM to 8 PM M-Sat, closed Sunday", store
+"6","1494 Palisade Lakes Dr","NULL","Bellaire","TX","77234", 4,"231-342-2423","9 AM to 8 PM M-Sat, closed Sunday", store

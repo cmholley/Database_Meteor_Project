@@ -1,0 +1,143 @@
+ {
+   "customer_id": 1,
+   "first_name": "Kate",
+   "mid_initial": "P",
+   "last_name": "Pinto",
+   "home_address_line1": "11234 Glove Dr",
+   "home_address_line2": "Apt 22",
+   "home_address_city": "Cypress ",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77944,
+   "phone_number": "433-847-2362",
+   "email": "kpinto@yahoo.com"
+ }
+ {
+   "customer_id": 2,
+   "first_name": "Kaitlyn",
+   "mid_initial": "S",
+   "last_name": "Browm",
+   "home_address_line1": "6433 Pants Ln",
+   "home_address_line2": null,
+   "home_address_city": "Houston ",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77544,
+   "phone_number": "131-342-8654",
+   "email": "kbrowm@gmail.com"
+ }
+ {
+   "customer_id": 3,
+   "first_name": "Leroy",
+   "mid_initial": "E",
+   "last_name": "Herrigel",
+   "home_address_line1": "65278 Socks Blvd",
+   "home_address_line2": null,
+   "home_address_city": "Bellaire",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77546,
+   "phone_number": "272-578-7292",
+   "email": "lherrigel@msn.com"
+ }
+ {
+   "customer_id": 4,
+   "first_name": "Bryce",
+   "mid_initial": "G",
+   "last_name": "Bransford",
+   "home_address_line1": "22954 Shoe Ct",
+   "home_address_line2": null,
+   "home_address_city": "Katy",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77463,
+   "phone_number": "289-245-7832",
+   "email": "bbransford@hotmail.com"
+ }
+ {
+   "customer_id": 5,
+   "first_name": "Melissa",
+   "mid_initial": "J",
+   "last_name": "Pena",
+   "home_address_line1": "17381 Lace Ln",
+   "home_address_line2": null,
+   "home_address_city": "Pearland",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77454,
+   "phone_number": "533-644-2432",
+   "email": "mpena@yahoo.com"
+ }
+ {
+   "customer_id": 6,
+   "first_name": "Kelly",
+   "mid_initial": "E",
+   "last_name": "Cruz",
+   "home_address_line1": "84523 Belt Blvd",
+   "home_address_line2": "Apt 78",
+   "home_address_city": "Frienswood",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77345,
+   "phone_number": "523-654-3454",
+   "email": "kcruz@msn.com"
+ }
+ {
+   "customer_id": 7,
+   "first_name": "Aithana",
+   "mid_initial": "V",
+   "last_name": "Reed",
+   "home_address_line1": "95234 Spray Dr",
+   "home_address_line2": null,
+   "home_address_city": "Spring",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77433,
+   "phone_number": "643-633-6678",
+   "email": "areed@yahoo.com"
+ }
+ {
+   "customer_id": 9,
+   "first_name": "Nisha",
+   "mid_initial": "H",
+   "last_name": "Pentlood",
+   "home_address_line1": "79323 Seahorse Ln",
+   "home_address_line2": null,
+   "home_address_city": "Woodlands",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77989,
+   "phone_number": "765-234-6544",
+   "email": "nreed@gmail.com"
+ }
+ {
+   "customer_id": 10,
+   "first_name": "Ann",
+   "mid_initial": "E",
+   "last_name": "Knope",
+   "home_address_line1": "98213 Elephant Ct",
+   "home_address_line2": null,
+   "home_address_city": "Baybrook",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77676,
+   "phone_number": "875-324-5222",
+   "email": "aknope@yahoo.com"
+ }
+ {
+   "customer_id": 11,
+   "first_name": "Leslie",
+   "mid_initial": "G",
+   "last_name": "Wheat",
+   "home_address_line1": "34322 Blanket Blvd",
+   "home_address_line2": "Apt 80",
+   "home_address_city": "Memorial",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77464,
+   "phone_number": "643-654-8755",
+   "email": "lwheat@yahoo.com"
+ }
+ {
+   "customer_id": 12,
+   "first_name": "Catalina",
+   "mid_initial": "B",
+   "last_name": "Wood",
+   "home_address_line1": "54245 Keypad Dr",
+   "home_address_line2": "Apt 12",
+   "home_address_city": "La Porte",
+   "home_address_state": "TX",
+   "home_address_zipcode": 77443,
+   "phone_number": "755-456-8654",
+   "email": "cwood@gmail.com"
+ }

@@ -1,0 +1,12 @@
+customer_id,first_name,mid_initial,last_name,home_address_line1,home_address_line2,home_address_city,home_address_state,home_address_zipcode,phone_number,email
+"1","Kate","P","Pinto","11234 Glove Dr","Apt 22","Cypress ","TX","77944","433-847-2362","kpinto@yahoo.com"
+"2","Kaitlyn","S","Browm","6433 Pants Ln","NULL","Houston ","TX","77544","131-342-8654","kbrowm@gmail.com"
+"3","Leroy","E","Herrigel","65278 Socks Blvd","NULL","Bellaire","TX","77546","272-578-7292","lherrigel@msn.com"
+"4","Bryce","G","Bransford","22954 Shoe Ct","NULL","Katy","TX","77463","289-245-7832","bbransford@hotmail.com"
+"5","Melissa","J","Pena","17381 Lace Ln","NULL","Pearland","TX","77454","533-644-2432","mpena@yahoo.com"
+"6","Kelly","E","Cruz","84523 Belt Blvd","Apt 78","Frienswood","TX","77345","523-654-3454","kcruz@msn.com"
+"7","Aithana","V","Reed","95234 Spray Dr","NULL","Spring","TX","77433","643-633-6678","areed@yahoo.com"
+"9","Nisha","H","Pentlood","79323 Seahorse Ln","NULL","Woodlands","TX","77989","765-234-6544","nreed@gmail.com"
+"10","Ann","E","Knope","98213 Elephant Ct","NULL","Baybrook","TX","77676","875-324-5222","aknope@yahoo.com"
+"11","Leslie","G","Wheat","34322 Blanket Blvd","Apt 80","Memorial","TX","77464","643-654-8755","lwheat@yahoo.com"
+"12","Catalina","B","Wood","54245 Keypad Dr","Apt 12","La Porte","TX","77443","755-456-8654","cwood@gmail.com"

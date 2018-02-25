@@ -1,0 +1,42 @@
+<template name="layout">
+	<nav class="ui menu">
+		<h1 class="header item">Furniture Store</h1>
+		<div class="right menu">
+			
+			<form method="get" action="/locations">
+				<button type="submit">Locations</button>
+			</form>
+
+			<form method="get" action="/inventory_items">
+				<button type="submit">Inventory Items</button>
+			</form>
+			{{#if currentUser}}
+			<form method="get" action="/customers">
+				<button type="submit">Customers</button>
+			</form>
+
+			<form method="get" action="/employees">
+				<button type="submit">Employees</button>
+			</form>
+	
+			<form method="get" action="/employees">
+				<button type="submit">Inventory Transfers</button>
+			</form>
+
+			<form method="get" action="/sales">
+				<button type="submit">Sales</button>
+			</form>
+			{{/if}}
+
+			{{> atNavButton}}
+		</div>
+		{{#if currentUser}}
+		<div class="right item">
+			Welcome, {{ currentUserName }}
+		</div>
+		{{/if}}
+	</nav>
+	<div class="ui grid">
+		<div class="column">{{> yield}}</div>
+	</div>
+</template>

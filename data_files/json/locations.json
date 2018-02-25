@@ -1,0 +1,78 @@
+{
+   "location_id": 1,
+   "address_line1": "15846 Barley Ln",
+   "address_line2": "Apt 6",
+   "address_city": "Houston",
+   "address_state": "TX",
+   "address_zipcode": 77054,
+   "manager_id": 1,
+   "phone_number": "125-478-8754",
+   "hours": "8 AM to 8 PM M-Sat, closed Sunday",
+   "square_footage": null,
+   "subtype": " store"
+}
+{
+   "location_id": 2,
+   "address_line1": "2458 Amazon Rd",
+   "address_line2": null,
+   "address_city": "Spring",
+   "address_state": "TX",
+   "address_zipcode": 77379,
+   "manager_id": 2,
+   "phone_number": "254-659-8795",
+   "hours": "8 AM to 8 PM M-Sat, closed Sunday",
+   "square_footage": null,
+   "subtype": " store"
+}
+{
+   "location_id": 3,
+   "address_line1": "23532 Calumet St",
+   "address_line2": null,
+   "address_city": "Humble",
+   "address_state": "TX",
+   "address_zipcode": 77004,
+   "manager_id": 3,
+   "phone_number": "123-123-1235",
+   "hours": "8 AM to 8 PM M-Sat, closed Sunday",
+   "square_footage": null,
+   "subtype": " store"
+}
+{
+   "location_id": 4,
+   "address_line1": "5487 Hidden Trail Blvd",
+   "address_line2": null,
+   "address_city": "Sugarland",
+   "address_state": "TX",
+   "address_zipcode": 77546,
+   "manager_id": 13,
+   "phone_number": "245-653-6231",
+   "hours": "",
+   "square_footage": 5000,
+   "subtype": " warehouse"
+}
+{
+   "location_id": 5,
+   "address_line1": "1256 Palace Ct",
+   "address_line2": "Apt 24",
+   "address_city": "Katy",
+   "address_state": "TX",
+   "address_zipcode": 77412,
+   "manager_id": 14,
+   "phone_number": "478-965-6585",
+   "hours": "",
+   "square_footage": 10000,
+   "subtype": " warehouse"
+}
+{
+   "location_id": 6,
+   "address_line1": "1494 Palisade Lakes Dr",
+   "address_line2": null,
+   "address_city": "Bellaire",
+   "address_state": "TX",
+   "address_zipcode": 77234,
+   "manager_id": 4,
+   "phone_number": "231-342-2423",
+   "hours": "9 AM to 8 PM M-Sat, closed Sunday",
+   "square_footage": null,
+   "subtype": " store"
+}

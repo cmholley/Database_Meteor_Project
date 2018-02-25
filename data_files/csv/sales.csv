@@ -1,0 +1,4 @@
+sale_id, location_id, customer_id, item_id, employee_id, sell_date
+1, 1, 1, 1, 1, '2017-2-16'
+2, 2, 5, 2, 4, '2016-12-15'
+3, 3, 8, 3, 7, '2017-5-22'

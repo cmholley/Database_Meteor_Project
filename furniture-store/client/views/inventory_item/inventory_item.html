@@ -1,0 +1,146 @@
+<template name="inventory_itemList">
+  <p>All Inventory_Items</p>
+  {{> addInventory_Item}}
+  {{> inventory_itemErrors contextName="updateForm" errorMessage="There was an error updating the record."}}
+  <table class="ui compact celled striped table">
+    <thead>
+      <tr>
+        <th class="two column wide"><i class="ui search icon" id="searchButton"></i>item_id{{> inventory_itemSearch columnName='item_id'}}</th>
+        <th class="two column wide">location_id {{> inventory_itemSearch columnName='location_id'}}</th>
+        <th class="two column wide">box_length {{> inventory_itemSearch columnName='box_length'}}</th>
+        <th class="two column wide">box_width {{> inventory_itemSearch columnName='box_width'}}</th>
+        <th class="two column wide">box_height {{> inventory_itemSearch columnName='box_height'}}</th>
+        <th class="two column wide">item_length {{> inventory_itemSearch columnName='item_length'}}</th>
+        <th class="two column wide">item_width {{> inventory_itemSearch columnName='item_width'}}</th>
+        <th class="two column wide">item_height {{> inventory_itemSearch columnName='item_height'}}</th>
+        <th class="two column wide">item_description {{> inventory_itemSearch columnName='item_description'}}</th>
+        <th class="two column wide">brand {{> inventory_itemSearch columnName='brand'}}</th>
+        <th class="two column wide">model_number {{> inventory_itemSearch columnName='model_number'}}</th>
+        <th class="two column wide">price {{> inventory_itemSearch columnName='price'}}</th>
+
+
+
+        {{#if isLoggedIn}}<th></th>{{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each inventory_items}}
+      {{> inventory_item}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="inventory_item">
+  {{#if editing}}
+  <tr class="ui form">
+    <td>{{item_id}}</td>
+    <td><div class="ui mini input"><input type="text" id="edit_location_id" value="{{location_id}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_box_length" value="{{box_length}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_box_width" value="{{box_width}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_box_height" value="{{box_height}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_item_length" value="{{item_length}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_item_width" value="{{item_width}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_item_height" value="{{item_height}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_item_description" value="{{item_description}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_brand" value="{{brand}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_model_number" value="{{model_number}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_price" value="{{price}}"></div></td>
+    <td><button class="ui mini primary button saveInventory_Item"><i class="ui save icon"></i>Save</button><button class="ui mini red button cancelInventory_Item"><i class="ui cancel icon"></i>Cancel</button></td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>{{item_id}}</td>
+    <td>{{location_id}}</td>
+    <td>{{box_length}}</td>
+    <td>{{box_width}}</td>
+    <td>{{box_height}}</td>
+    <td>{{item_length}}</td>
+    <td>{{item_width}}</td>
+    <td>{{item_height}}</td>
+    <td>{{item_description}}</td>
+    <td>{{brand}}</td>
+    <td>{{model_number}}</td>
+    <td>{{price}}</td>
+
+    <td>
+      {{#if isLoggedIn}}
+      <button class="ui mini primary button editInventory_Item"><i class="ui edit icon"></i>Edit</button>
+      <button class="ui mini red button deleteInventory_Item"><i class="ui delete icon"></i>Delete</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/if}}
+</template>
+
+<template name="addInventory_Item">
+  {{#if isLoggedIn}}
+  <script src="temp/jquery-1.11.0.min.js"></script> <script src="temp/semantic.min.js"></script> 
+  <script> $(".accordion").accordion(); </script>
+  <div id="addInventory_ItemAccordion" class="ui styled fluid accordion">
+    <div class="title">
+      <div class="ui mini green button"><i class="ui add icon"></i>Add Inventory_Items</div>  
+    </div>
+
+    <div class="content">{{> inventory_itemErrors contextName="insertForm" errorMessage="There was an error inserting the record."}}
+      <form class="ui form" id="addInventory_ItemForm">
+        <div class = "ten fields">
+          <div class="field">
+            <label for="location_id">Location ID:</label>
+            <input type="text" id="location_id">
+          </div>
+          <div class="field">
+            <label for="box_length">Box Length:</label>
+            <input type="text" id="box_length"> 
+          </div>
+          <div class="field">
+            <label for="box_width">Box Width:</label>
+            <input type="text" id="box_width"> 
+          </div>
+          <div class="field">
+            <label for="box_Height">Box Height:</label>
+            <input type="text" id="box_Height"> 
+          </div>
+          <div class="field">
+            <label for="item_length">Box Length:</label>
+            <input type="text" id="item_length"> 
+          </div>
+          <div class="field">
+            <label for="item_width">Box Width:</label>
+            <input type="text" id="item_width"> 
+          </div>
+          <div class="field">
+            <label for="item_Height">Box Height:</label>
+            <input type="text" id="item_Height"> 
+          </div>
+          <div class="field">
+            <label for="item_description">Item Description:</label>
+            <input type="text" id="item_description">
+          </div>
+          <div class="field">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand">
+          </div>
+          <div class="field">
+            <label for="model_number">Model Number:</label>
+            <input type="text" id="model_number">
+          </div>
+          <div class="field">
+            <label for="price">Price:</label>
+            <input type="text" id="price">
+          </div>
+        </div>
+        <input type="submit" id="addNewInventory_Item" class="ui mini primary button" value="Add Inventory_Item">
+        <div id="cancelButton" class="button ui mini red button">Cancel</div>
+      </form>
+    </div>
+  </div>
+  <script> $(".accordion").accordion(); </script>
+  {{/if}}
+</template>
+
+<template name="inventory_itemSearch">  
+  <div class="ui fluid mini input filterInput">
+    <input type="text" class="searchInput" placeholder="Filter..." value="{{searchValue}}">
+  </div>  
+</template>

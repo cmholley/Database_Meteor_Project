@@ -1,0 +1,25 @@
+
+ {
+   "sale_id": 1,
+   "location_id": 1,
+   "customer_id": 1,
+   "item_id": 1,
+   "employee_id": 1,
+   "sell_date": " '2017-2-16'"
+ }
+ {
+   "sale_id": 2,
+   "location_id": 2,
+   "customer_id": 5,
+   "item_id": 2,
+   "employee_id": 4,
+   "sell_date": " '2016-12-15'"
+ }
+ {
+   "sale_id": 3,
+   "location_id": 3,
+   "customer_id": 8,
+   "item_id": 3,
+   "employee_id": 7,
+   "sell_date": " '2017-5-22'"
+ }

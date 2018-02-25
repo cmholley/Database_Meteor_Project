@@ -1,0 +1,25 @@
+
+ {
+   "transfer_id": 1,
+   "source_location_id": 4,
+   "destination_location_id": 1,
+   "item_id": 7,
+   "transfer_date": " '2017-6-3'",
+   "authorized_by": 1
+ }
+ {
+   "transfer_id": 2,
+   "source_location_id": 5,
+   "destination_location_id": 2,
+   "item_id": 8,
+   "transfer_date": " '2017-4-20'",
+   "authorized_by": 4
+ }
+ {
+   "transfer_id": 3,
+   "source_location_id": 1,
+   "destination_location_id": 5,
+   "item_id": 11,
+   "transfer_date": " '2017-3-19'",
+   "authorized_by": 13
+ }

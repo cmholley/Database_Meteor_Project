@@ -1,0 +1,17 @@
+employee_id,first_name,mid_initial,last_name,location_id,ssn,home_address_line1,home_address_line2,home_address_city,home_address_state,home_address_zipcode,phone_number,email, position, rank, subtype
+1,John,D,Smith,1,323555765,10015 Gladstone St,NULL,Cypress,TX,77153,281-111-2156,jsmith@gmail.com,,General, manager
+2,Jacob,G,Lee,1,323768098,3643 Binz Ln,Apt 23,Pearland,TX,77253,232-343-2422,jlee@gmail.com,,Associate,  manager
+4,Orville,G,Trujillo,2,456787766,27017 Lily Flower Ln,NULL,Deer Park,TX,77362,322-131-3532,otrujillo@yahoo.com,,General, manager
+5,James,U,Schuller,2,236546987,73492 Greenbriar St,Apt 9,Houston,TX,77054,643-634-3534,jschuller@msn.com,,Associate, manager
+7,Liam,H,Corrigan,3,565987098,4681 Holley Ln,Apt 36,Humble,TX,77004,432-654-4322,lcorrigan@att.net,,General, manager
+8,Peter,O,Steele,3,978575789,5632 Orville Rd,NULL,Sugarland,TX,77546,533-242-2235,psteele@yahoo.com,,Associate, manager
+10,Bob,V,Robinson,6,765984567,29742 Gilly Stark Dr,NULL,Bellaire,TX,77234,355-432-7654,brobinson@att.net,,General, manager
+11,Stevie,N,Johnson,6,465498778,16253 Lanister Place Blvd,Apt 32,Cypress,TX,77153,532-532-6432,sjohnson@yahoo.com,,Associate, manager
+13,Kipp,W,Luck,5,876987984,93262 Frodo Lee Rd,NULL,Baybrook,TX,77394,682-653-5637,kluck@gmail.com,,Warehouse, manager
+14,Will,I,Simpsons,4,434265876,92743 Marie Ln,Apt 12,Deer Park,TX,77362,281-573-2846,wsimpsons@hotmail.com,,Warehouse, manager
+3,Lee,D,Holley,1,767898909,8203 Bissonet Ct,Apt 15,Baybrook,TX,77394,232-344-2231,lholley@hotmail.com, Checkout,, staff
+6,Jake,S,Root,2,456346987,3917 Mandola Blvd,NULL,Spring,TX,77379,424-432-5322,jroot@gmail.com, Checkout,, staff
+9,Steven,E,Abbott,3,656345238,29645 Abbott St,NULL,Katy,TX,77412,523-543-2453,sabbott@att.net, Checkout,, staff
+12,Jared,U,Chain,6,464765345,1336 Patrick Ln,NULL,Pearland,TX,77253,826-529-5392,jchain@msn.com, Checkout,, staff
+15,Garrett,P,Young,4,646987578,73492 Greenbriar St,Apt 9,Houston,TX,77054,643-634-3534,gyoung@yahoo.com,Warehouse Worker,, staff
+16,Jack,N,Nguyen,5,565987890,16253 Lanister Place Blvd,Apt 32,Cypress,TX,77153,532-532-6432,jnguyen@msn.com,Warehouse Worker,, staff

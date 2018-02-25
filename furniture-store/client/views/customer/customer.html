@@ -1,0 +1,135 @@
+<template name="customerList">
+  <p>All Customers</p>
+  {{> addCustomer}}
+  {{> customerErrors contextName="updateForm" errorMessage="There was an error updating the record."}}
+  <table class="ui compact celled striped table">
+    <thead>
+      <tr>
+        <th class="two column wide"><i class="ui search icon" id="searchButton"></i>customer_id{{> customerSearch columnName='customer_id'}}</th>
+        <th class="two column wide">first_name {{> customerSearch columnName='first_name'}}</th>
+        <th class="two column wide">mid_initial {{> customerSearch columnName='mid_initial'}}</th>
+        <th class="two column wide">last_name {{> customerSearch columnName='last_name'}}</th>
+        <th class="two column wide">home_address_line1 {{> customerSearch columnName='home_address_line1'}}</th>
+        <th class="two column wide">home_address_line2 {{> customerSearch columnName='home_address_line2'}}</th>
+        <th class="two column wide">home_address_city {{> customerSearch columnName='home_address_city'}}</th>
+        <th class="two column wide">home_address_state {{> customerSearch columnName='home_address_state'}}</th>
+        <th class="two column wide">home_address_zipcode {{> customerSearch columnName='home_address_zipcode'}}</th>
+        <th class="two column wide">phone_number {{> customerSearch columnName='phone_number'}}</th>
+        <th class="two column wide">email {{> customerSearch columnName='email'}}</th>
+        {{#if isLoggedIn}}<th></th>{{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each customers}}
+      {{> customer}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="customer">
+  {{#if editing}}
+  <tr class="ui form">
+    <td>{{customer_id}}</td>
+    <td><div class="ui mini input"><input type="text" id="edit_first_name" value="{{first_name}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_mid_initial" value="{{mid_initial}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_last_name" value="{{last_name}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_line1" value="{{home_address_line1}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_line2" value="{{home_address_line2}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_city" value="{{home_address_city}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_state" value="{{home_address_state}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_zipcode" value="{{home_address_zipcode}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_phone_number" value="{{phone_number}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_email" value="{{email}}"></div></td>
+    <td><button class="ui mini primary button saveCustomer"><i class="ui save icon"></i>Save</button><button class="ui mini red button cancelCustomer"><i class="ui cancel icon"></i>Cancel</button></td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>{{customer_id}}</td>
+    <td>{{first_name}}</td>
+    <td>{{mid_initial}}</td>
+    <td>{{last_name}}</td>
+    <td>{{home_address_line1}}</td>
+    <td>{{home_address_line2}}</td>
+    <td>{{home_address_city}}</td>
+    <td>{{home_address_state}}</td>
+    <td>{{home_address_zipcode}}</td>
+    <td>{{phone_number}}</td>
+    <td>{{email}}</td>
+    <td>
+      {{#if isLoggedIn}}
+      <button class="ui mini primary button editCustomer"><i class="ui edit icon"></i>Edit</button>
+      <button class="ui mini red button deleteCustomer"><i class="ui delete icon"></i>Delete</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/if}}
+</template>
+
+<template name="addCustomer">
+  {{#if isLoggedIn}}
+  <script src="temp/jquery-1.11.0.min.js"></script> <script src="temp/semantic.min.js"></script> 
+  <script> $(".accordion").accordion(); </script>
+  <div id="addCustomerAccordion" class="ui styled fluid accordion">
+    <div class="title">
+      <div class="ui mini green button"><i class="ui add icon"></i>Add Customers</div>  
+    </div>
+
+    <div class="content">{{> customerErrors contextName="insertForm" errorMessage="There was an error inserting the record."}}
+      <form class="ui form" id="addCustomerForm">
+        <div class = "ten fields">
+          <div class="field">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name">    
+          </div>
+          <div class="field">
+            <label for="mid_initial">Mid Initial:</label>
+            <input type="text" id="mid_initial">
+          </div>
+          <div class="field">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name">
+          </div>
+          <div class="field">
+            <label for="home_address_line1">home Address Line1:</label>
+            <input type="text" id="home_address_line1">
+          </div>
+          <div class="field">
+            <label for="home_address_line2">Home Address Line2:</label>
+            <input type="text" id="home_address_line2"> 
+          </div>
+          <div class="field">
+            <label for="home_address_city">City:</label>
+            <input type="text" id="home_address_city">
+          </div>
+          <div class="field">
+            <label for="home_address_state">State:</label>
+            <input type="text" id="home_address_state">
+          </div>
+          <div class="field">
+            <label for="home_address_zipcode">Zipcode:</label>
+            <input type="text" id="home_address_zipcode">
+          </div>
+          <div class="field">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number">
+          </div>
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+          </div>
+        </div>
+        <input type="submit" id="addNewCustomer" class="ui mini primary button" value="Add Customer">
+        <div id="cancelButton" class="button ui mini red button">Cancel</div>
+      </form>
+    </div>
+  </div>
+  <script> $(".accordion").accordion(); </script>
+  {{/if}}
+</template>
+
+<template name="customerSearch">  
+  <div class="ui fluid mini input filterInput">
+    <input type="text" class="searchInput" placeholder="Filter..." value="{{searchValue}}">
+  </div>  
+</template>

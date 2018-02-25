@@ -1,0 +1,173 @@
+<template name="employeeList">
+  <p>All Employees</p>
+  {{> addEmployee}}
+  {{> employeeErrors contextName="updateForm" errorMessage="There was an error updating the record."}}
+  <table class="ui compact celled striped table">
+    <thead>
+      <tr>
+        <th class="two column wide"><i class="ui search icon" id="searchButton"></i>employee_id{{> employeeSearch columnName='employee_id'}}</th>
+        <th class="two column wide">first_name {{> locationSearch columnName='first_name'}}</th>
+        <th class="two column wide">mid_initial {{> locationSearch columnName='mid_initial'}}</th>
+        <th class="two column wide">last_name {{> locationSearch columnName='last_name'}}</th>
+        <th class="two column wide">location_id {{> locationSearch columnName='location_id'}}</th>
+        <th class="two column wide">ssn {{> locationSearch columnName='ssn'}}</th>
+        <th class="two column wide">home_address_line1 {{> locationSearch columnName='home_address_line1'}}</th>
+        <th class="two column wide">home_address_line2 {{> locationSearch columnName='home_address_line2'}}</th>
+        <th class="two column wide">home_address_city {{> locationSearch columnName='home_address_city'}}</th>
+        <th class="two column wide">home_address_state {{> locationSearch columnName='home_address_state'}}</th>
+        <th class="two column wide">home_address_zipcode {{> locationSearch columnName='home_address_zipcode'}}</th>
+        <th class="two column wide">phone_number {{> locationSearch columnName='phone_number'}}</th>
+        <th class="two column wide">email {{> locationSearch columnName='email'}}</th>
+        <th class="two column wide">position {{> locationSearch columnName='position'}}</th>
+        <th class="two column wide">rank {{> locationSearch columnName='rank'}}</th>
+        <th class="two column wide">subtype {{> locationSearch columnName='subtype'}}</th>
+        {{#if isLoggedIn}}<th></th>{{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each employees}}
+      {{> employee}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="employee">
+  {{#if editing}}
+  <tr class="ui form">
+    <td>{{employee_id}}</td>
+    <td><div class="ui mini input"><input type="text" id="edit_first_name" value="{{first_name}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_mid_initial" value="{{mid_initial}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_last_name" value="{{last_name}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_location_id" value="{{location_id}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_ssn" value="{{ssn}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_line1" value="{{home_address_line1}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_line2" value="{{home_address_line2}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_city" value="{{home_address_city}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_state" value="{{home_address_state}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_home_address_zipcode" value="{{home_address_zipcode}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_phone_number" value="{{phone_number}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_email" value="{{email}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_position" value="{{position}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_rank" value="{{rank}}"></div></td>
+    <td><div class="ui mini input"><input type="text" id="edit_subtype" value="{{subtype}}"></div></td>
+
+
+    <td><button class="ui mini primary button saveEmployee"><i class="ui save icon"></i>Save</button><button class="ui mini red button cancelEmployee"><i class="ui cancel icon"></i>Cancel</button></td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>{{employee_id}}</td>
+    <td>{{first_name}}</td>
+    <td>{{mid_initial}}</td>
+    <td>{{last_name}}</td>
+    <td>{{location_id}}</td>
+    <td>{{ssn}}</td>
+    <td>{{home_address_line1}}</td>
+    <td>{{home_address_line2}}</td>
+    <td>{{home_address_city}}</td>
+    <td>{{home_address_state}}</td>
+    <td>{{home_address_zipcode}}</td>
+    <td>{{phone_number}}</td>
+    <td>{{email}}</td>
+    <td>{{position}}</td>
+    <td>{{rank}}</td>
+    <td>{{subtype}}</td>
+
+    <td>
+      {{#if isLoggedIn}}
+      <button class="ui mini primary button editEmployee"><i class="ui edit icon"></i>Edit</button>
+      <button class="ui mini red button deleteEmployee"><i class="ui delete icon"></i>Delete</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/if}}
+</template>
+
+<template name="addEmployee">
+  {{#if isLoggedIn}}
+  <script src="temp/jquery-1.11.0.min.js"></script> <script src="temp/semantic.min.js"></script> 
+  <script> $(".accordion").accordion(); </script>
+  <div id="addEmployeeAccordion" class="ui styled fluid accordion">
+    <div class="title">
+      <div class="ui mini green button"><i class="ui add icon"></i>Add Employees</div>  
+    </div>
+
+    <div class="content">{{> employeeErrors contextName="insertForm" errorMessage="There was an error inserting the record."}}
+      <form class="ui form" id="addEmployeeForm">
+        <div class = "ten fields">
+          <div class="field">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name">    
+          </div>
+          <div class="field">
+            <label for="mid_initial">Mid Initial:</label>
+            <input type="text" id="mid_initial">
+          </div>
+          <div class="field">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name">
+          </div>
+          <div class="field">
+            <label for="location_id">Location ID:</label>
+            <input type="text" id="location_id">
+          </div>
+          <div class="field">
+            <label for="ssn">SSN:</label>
+            <input type="text" id="ssn">
+          </div>
+          <div class="field">
+            <label for="home_address_line1">home Address Line1:</label>
+            <input type="text" id="home_address_line1">
+          </div>
+          <div class="field">
+            <label for="home_address_line2">Home Address Line2:</label>
+            <input type="text" id="home_address_line2"> 
+          </div>
+          <div class="field">
+            <label for="home_address_city">City:</label>
+            <input type="text" id="home_address_city">
+          </div>
+          <div class="field">
+            <label for="home_address_state">State:</label>
+            <input type="text" id="home_address_state">
+          </div>
+          <div class="field">
+            <label for="home_address_zipcode">Zipcode:</label>
+            <input type="text" id="home_address_zipcode">
+          </div>
+          <div class="field">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number">
+          </div>
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+          </div>
+          <div class="field">
+            <label for="position">Position:</label>
+            <input type="text" id="position">
+          </div>
+          <div class="field">
+            <label for="rank">Rank:</label>
+            <input type="text" id="rank">
+          </div>
+          <div class="field">
+            <label for="subtype">Subtype:</label>
+            <input type="text" id="subtype">
+          </div>
+        </div>
+        <input type="submit" id="addNewEmployee" class="ui mini primary button" value="Add Employee">
+        <div id="cancelButton" class="button ui mini red button">Cancel</div>
+      </form>
+    </div>
+  </div>
+  <script> $(".accordion").accordion(); </script>
+  {{/if}}
+</template>
+
+<template name="employeeSearch">  
+  <div class="ui fluid mini input filterInput">
+    <input type="text" class="searchInput" placeholder="Filter..." value="{{searchValue}}">
+  </div>  
+</template>
